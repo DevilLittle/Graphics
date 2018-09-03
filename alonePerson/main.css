@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: darkolivegreen;
+}
+
+.man{
+    width: 7em;
+    height: 33em;
+    border: 1px dashed black;
+    color: white;
+    font-size: 10px;
+    position: relative;
+}
+
+.head{
+    width: 7em;
+    height: 7em;
+    background-color: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+.body{
+    width: 6.2em;
+    height: 14.4em;
+    background-color: currentColor;
+    position: absolute;
+    top: 7em;
+    border-radius: 100% 20% 0 0;
+}
+
+.feet::before,
+.feet::after{
+    content: '';
+    position: absolute;
+    width: 4em;
+    height: 1.4em;
+    background-color: currentColor;
+    border-radius: 1em 80% 0.4em 0.4em;
+    bottom: 0;
+    left: -1.6em;
+    animation: feet-animation 2s ease-in-out infinite;
+}
+
+@keyframes feet-animation {
+    20% {
+        transform: translateX(3.4em) translateY(-1.6em) rotate(4deg);
+    }
+
+    30% {
+        transform: translateX(4.6em) translateY(-1em) rotate(0deg);
+    }
+
+}
