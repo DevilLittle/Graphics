@@ -64,7 +64,9 @@ body{
 }
 ```
 画出的效果图：
+
 ![色卡效果](https://upload-images.jianshu.io/upload_images/3214119-9be47be5951ed41d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 由于绘制的色卡需要边框，所以按照标准的盒子模型会占用额外面积，超出规定区域，所以需要改变一下盒子模型：
 ```
@@ -85,7 +87,9 @@ body{
     right: 0;
 }
 ```
+
 ![制作标签](https://upload-images.jianshu.io/upload_images/3214119-ed2c98772363bf65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 用after伪元素画出色卡标签上的文字：
 ```
@@ -100,7 +104,9 @@ body{
     box-shadow: 0.7em 0 0 -0.1em silver;
 }
 ```
+
 ![添加标签文字](https://upload-images.jianshu.io/upload_images/3214119-d463ead4b36f998b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ##### 四、色卡上色
 色卡上色采用HSL色彩模式，就是色调(Hue)、饱和度(Saturation)、亮度(Lightness)三个颜色通道的改变以及它们相互之间的叠加来获得各种颜色，色调(Hue)色调最大值360，饱和度和亮度有百分比表示0-100%之间。
@@ -108,8 +114,10 @@ body{
 **HSL(H,S,L)：**
 H(色调)：
 0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：0 - 360
+
 S(饱和度)：
 取值为：0.0% - 100.0%
+
 L(亮度)：
 取值为：0.0% - 100.0%
 ```
@@ -162,4 +170,5 @@ L(亮度)：
     animation-delay: calc((var(--n) - 8) * 0.15s);
 }
 ```
+
 ![旋转](https://upload-images.jianshu.io/upload_images/3214119-f833344421eed956.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

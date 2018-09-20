@@ -32,7 +32,9 @@ body{
     font-size: 30px;
 }
 ```
+
 ![图标容器](https://upload-images.jianshu.io/upload_images/3214119-f6589d621fe698b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ##### 二、画出花瓣矩形
 为图标容器填入花瓣：
@@ -66,7 +68,9 @@ body{
 }
 ```
 画出的效果图：
+
 ![花瓣效果](https://upload-images.jianshu.io/upload_images/3214119-10c75f60cec6a8d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 因为使用了flex布局，八个span会排成一行，由于容器宽度不够（8*22.5%）,所以宽度会缩小，然后排成一行。使用position:absolute;使他们重叠在一起，宽度是22.5%。
 
 ##### 三、花瓣散开
@@ -97,7 +101,9 @@ div { 
     --n: 2;
 }
 ```
+
 ![花瓣旋转](https://upload-images.jianshu.io/upload_images/3214119-4baf40d65db19658.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 现在是旋转后的样子，由于他们之间重叠部分太多了，所以需要调整一下位置。
 **transform-origin: x-axis y-axis z-axis;**
 调整Y轴到一个差不多的位置，最终为：
@@ -108,7 +114,9 @@ div { 
 }
 ```
 此时效果：
+
 ![调整后](https://upload-images.jianshu.io/upload_images/3214119-23aed5556a48f540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 现在八瓣都旋转一下，设置下标变量n：
 ```
@@ -138,7 +146,9 @@ div { 
 }
 ```
 效果图：
+
 ![八瓣花瓣旋转](https://upload-images.jianshu.io/upload_images/3214119-aedafa19f7c7b227.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ##### 四、填色
 为花瓣设置颜色：
@@ -172,14 +182,18 @@ div { 
     --c: rgba(242, 38, 19, 0.7);
 }
 ```
+
 ![填充颜色](https://upload-images.jianshu.io/upload_images/3214119-3bbaf17f47a9c6ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 设置混色模式，使重叠颜色能叠加在一起：
 ```
 .icon span {
     mix-blend-mode: multiply;
 }
 ```
+
 ![颜色叠加](https://upload-images.jianshu.io/upload_images/3214119-76f10fdf7d93248b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 明显设置颜色叠加后效果要更好一点。
 
 ##### 五、扩展动画
@@ -198,7 +212,9 @@ div { 
 }
 ```
 此时可以看到效果，这里只截取了展开的一部分：
+
 ![花瓣展开](https://upload-images.jianshu.io/upload_images/3214119-f8fa9e051c6462fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 仔细观察可以发现，第一瓣花瓣始终没有动，因为我们设置的旋转角度中，把它忽略掉了，如果想要展开时每个花瓣都动，可以将第一瓣花瓣设置为：
 ```
 .icon span:nth-child(1) {
